@@ -108,7 +108,7 @@ router.post('/login', async (req, res) => {
   if (isCorrectPassword) {
   
   delete user._doc.password
-  if (!user.isActive) return res.status(200).send({ success:
+  if (!user.isActive) return res.status(404).send({ success:
   
   false, message: 'Your account is inactive, Please contact youradministrator' })
   
