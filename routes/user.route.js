@@ -35,7 +35,7 @@ var mailOption ={
   html:`<h2>${newUser.firstname}! thank you for registreting on our website</h2>
   <h4>please verify your email to procced.. </h4>
   <a
-  href="http://${req.headers.host}/api/user/status/edit?email=${newUser.email}">click
+  href="http://${req.headers.host}/api/users/status/edit?email=${newUser.email}">click
   here</a>`
   }
   transporter.sendMail(mailOption,function(error,info){
