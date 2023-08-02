@@ -7,9 +7,13 @@ const articleRouter = require('./routes/article.route');
 const cors = require ('cors');
 const paymentRouter = require( "./routes/payment.route.js")
 const userRouter = require( "./routes/user.route.js")
+// Initialize compression module
+const compression = require('compression');
 
 dotenv.config()
 const app = express();
+// Compress all HTTP responses
+app.use(compression());
 
 //BodyParser Middleware
 app.use(express.json());
